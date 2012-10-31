@@ -1,4 +1,4 @@
-# Net::HTTP::TIMEOUT\_ERRORS
+# NetHttpTimeoutErrors
 
 Tired of having to rescue an ever-growing list of Net::HTTP timeout error types?
 
@@ -8,9 +8,9 @@ Just include this gem and then do:
 begin
   uri = URI.parse("http://google.com/")
   response = Net::HTTP.get_response(uri)
-rescue *Net::HTTP::TIMEOUT_ERRORS
+rescue *NetHttpTimeoutErrors.all
   puts "It timed out some way or other!"
-rescue AnotherError, *Net::HTTP::TIMEOUT_ERRORS
+rescue AnotherError, *NetHttpTimeoutErrors.all
   puts "This works too."
 end
 ```

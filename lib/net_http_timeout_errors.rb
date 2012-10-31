@@ -1,9 +1,9 @@
 require "net_http_timeout_errors/version"
 require "net/http"
 
-module Net
-  class HTTP
-    TIMEOUT_ERRORS = [
+module NetHttpTimeoutErrors
+  def self.all
+    [
       Errno::ECONNREFUSED,
       Errno::ECONNRESET,
       Errno::EHOSTUNREACH,

@@ -1,8 +1,16 @@
 require "minitest/autorun"
 require "net_http_timeout_errors"
 
-describe Net::HTTP, "TIMEOUT_ERRORS" do
+describe NetHttpTimeoutErrors, ".all" do
   it "has some" do
-    Net::HTTP::TIMEOUT_ERRORS.wont_be_empty
+    NetHttpTimeoutErrors.all.wont_be_empty
+  end
+
+  # No assertions; more like runnable documentation.
+  it "works splatted" do
+    begin
+      raise Timeout::Error
+    rescue ZeroDivisionError, *NetHttpTimeoutErrors.all
+    end
   end
 end
