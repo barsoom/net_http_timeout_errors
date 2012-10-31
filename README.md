@@ -4,7 +4,7 @@ Tired of having to rescue an ever-growing list of Net::HTTP timeout error types?
 
 Just include this gem and then do:
 
-```
+``` ruby
 begin
   uri = URI.parse("http://google.com/")
   response = Net::HTTP.get_response(uri)
