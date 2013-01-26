@@ -48,6 +48,11 @@ Or install it yourself as:
     $ gem install net_http_timeout_errors
 
 
+## Also see
+
+* [net_http_exception_fix](https://github.com/edward/net_http_exception_fix)
+
+
 ## License
 
 Copyright (c) 2012 [Barsoom AB](http://barsoom.se)
