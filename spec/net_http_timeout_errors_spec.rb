@@ -9,7 +9,7 @@ describe NetHttpTimeoutErrors, ".all" do
   # No assertions; more like runnable documentation.
   it "works splatted" do
     begin
-      raise an_error
+      raise some_timeout_error
     rescue ZeroDivisionError, *NetHttpTimeoutErrors.all
     end
   end
@@ -19,7 +19,7 @@ describe NetHttpTimeoutErrors, ".conflate" do
   it "turns any handled error into a NetHttpTimeoutError" do
     assert_raises(NetHttpTimeoutError) do
       NetHttpTimeoutErrors.conflate do
-        raise an_error
+        raise some_timeout_error
       end
     end
   end
@@ -35,14 +35,14 @@ describe NetHttpTimeoutErrors, ".conflate" do
   it "keeps the original error" do
     begin
       NetHttpTimeoutErrors.conflate do
-        raise an_error
+        raise some_timeout_error
       end
     rescue => e
-      assert_instance_of Timeout::Error, e.original_error
+      assert_instance_of some_timeout_error, e.original_error
     end
   end
 end
 
-def an_error
-  Timeout::Error
+def some_timeout_error
+  SocketError
 end
