@@ -15,7 +15,7 @@ rescue AnotherError, *NetHttpTimeoutErrors.all
 end
 ```
 
-Did we miss an exception? Please add it!
+Did we miss an error? Please add it!
 
 
 ## Installation
