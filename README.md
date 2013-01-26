@@ -2,7 +2,7 @@
 
 Tired of having to rescue an ever-growing list of Net::HTTP timeout error types?
 
-Just include this gem and then do:
+Just load this gem and then do:
 
 ``` ruby
 begin
