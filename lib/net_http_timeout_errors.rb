@@ -16,6 +16,7 @@ class NetHttpTimeoutErrors
       Errno::ECONNRESET,
       Errno::EHOSTUNREACH,
       Errno::EPIPE,
+      Errno::ETIMEDOUT,
       SocketError,
       Timeout::Error,
     ]
