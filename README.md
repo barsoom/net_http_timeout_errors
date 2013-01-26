@@ -6,6 +6,19 @@ Just include this gem and then do:
 
 ``` ruby
 begin
+  NetHttpTimeoutErrors.conflate do
+    uri = URI.parse("http://google.com/")
+    response = Net::HTTP.get_response(uri)
+  end
+rescue NetHttpTimeoutError
+  puts "It timed out some way or other!"
+end
+```
+
+Or if you like:
+
+``` ruby
+begin
   uri = URI.parse("http://google.com/")
   response = Net::HTTP.get_response(uri)
 rescue *NetHttpTimeoutErrors.all
