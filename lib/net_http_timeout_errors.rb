@@ -12,11 +12,16 @@ end
 class NetHttpTimeoutErrors
   def self.all
     [
+      EOFError,
       Errno::ECONNREFUSED,
       Errno::ECONNRESET,
       Errno::EHOSTUNREACH,
+      Errno::EINVAL,
       Errno::EPIPE,
       Errno::ETIMEDOUT,
+      Net::HTTPBadResponse,
+      Net::HTTPHeaderSyntaxError,
+      Net::ProtocolError,
       SocketError,
       Timeout::Error,
     ]
