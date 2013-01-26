@@ -3,15 +3,7 @@ require "net_http_timeout_errors"
 
 describe NetHttpTimeoutErrors, ".all" do
   it "has some" do
-    NetHttpTimeoutErrors.all.wont_be_empty
-  end
-
-  # No assertions; more like runnable documentation.
-  it "works splatted" do
-    begin
-      raise some_timeout_error
-    rescue ZeroDivisionError, *NetHttpTimeoutErrors.all
-    end
+    assert_includes NetHttpTimeoutErrors.all, some_timeout_error
   end
 end
 
