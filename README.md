@@ -28,6 +28,8 @@ rescue AnotherError, *NetHttpTimeoutErrors.all
 end
 ```
 
+You can still get at the original error through `NetHttpTimeoutError#original_error`.
+
 Did we miss an error? Please add it!
 
 
