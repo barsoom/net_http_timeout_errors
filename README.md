@@ -50,8 +50,9 @@ Or install it yourself as:
 
 ## Also see
 
-* [net_http_exception_fix](https://github.com/edward/net_http_exception_fix)
+There is also [net_http_exception_fix](https://github.com/edward/net_http_exception_fix) which cleverly tags these exceptions with a `Net::HTTPBroken` module that you can rescue.
 
+You may prefer about *this* library that it very explicitly raises a single exception. The tagged exceptions are less obviously "the same".
 
 ## License
 
