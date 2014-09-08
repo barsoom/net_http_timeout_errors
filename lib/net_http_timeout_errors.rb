@@ -17,6 +17,7 @@ class NetHttpTimeoutErrors
       Errno::ECONNRESET,
       Errno::EHOSTUNREACH,
       Errno::EINVAL,
+      Errno::ENETUNREACH,
       Errno::EPIPE,
       Errno::ETIMEDOUT,
       Net::HTTPBadResponse,
