@@ -22,6 +22,7 @@ class NetHttpTimeoutErrors
       Errno::ETIMEDOUT,
       Net::HTTPBadResponse,
       Net::HTTPHeaderSyntaxError,
+      Net::HTTPGatewayTimeOut,
       Net::ProtocolError,
       SocketError,
       Timeout::Error,
