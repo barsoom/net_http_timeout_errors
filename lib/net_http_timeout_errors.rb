@@ -23,6 +23,7 @@ class NetHttpTimeoutErrors
       Net::HTTPBadResponse,
       Net::HTTPHeaderSyntaxError,
       Net::ProtocolError,
+      Net::ReadTimeout,
       SocketError,
       Timeout::Error,  # Also covers subclasses like Net::OpenTimeout.
     ]
