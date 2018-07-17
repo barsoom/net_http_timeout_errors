@@ -14,7 +14,6 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = NetHttpTimeoutErrors::VERSION
 
-  if RUBY_VERSION < "1.9.3"
-    gem.add_development_dependency "minitest"
-  end
+  gem.add_development_dependency "rake"
+  gem.add_development_dependency "minitest"
 end
