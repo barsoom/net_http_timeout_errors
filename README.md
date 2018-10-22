@@ -1,21 +1,8 @@
 # NetHttpTimeoutErrors
 
-Tired of having to rescue an ever-growing list of Net::HTTP timeout error types?
+Whether you use Net::HTTP or some higher abstraction like HTTParty, are you tired of having to rescue an ever-growing list of Net::HTTP timeout error types?
 
 Just load this gem and then do:
-
-``` ruby
-begin
-  NetHttpTimeoutErrors.conflate do
-    uri = URI.parse("http://google.com/")
-    response = Net::HTTP.get_response(uri)
-  end
-rescue NetHttpTimeoutError
-  puts "It timed out some way or other!"
-end
-```
-
-Or if you like:
 
 ``` ruby
 begin
@@ -25,6 +12,19 @@ rescue *NetHttpTimeoutErrors.all
   puts "It timed out some way or other!"
 rescue AnotherError, *NetHttpTimeoutErrors.all
   puts "This works too."
+end
+```
+
+Or if you prefer:
+
+``` ruby
+begin
+  NetHttpTimeoutErrors.conflate do
+    uri = URI.parse("http://google.com/")
+    response = Net::HTTP.get_response(uri)
+  end
+rescue NetHttpTimeoutError
+  puts "It timed out some way or other!"
 end
 ```
 
