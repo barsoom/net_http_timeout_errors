@@ -5,6 +5,12 @@ describe NetHttpTimeoutErrors, ".all" do
   it "has some" do
     assert_includes NetHttpTimeoutErrors.all, some_timeout_error
   end
+
+  NetHttpTimeoutErrors.all.each do |e|
+    it "#{e} is a subclass of Exception" do
+      assert e < Exception
+    end
+  end
 end
 
 describe NetHttpTimeoutErrors, ".conflate" do
