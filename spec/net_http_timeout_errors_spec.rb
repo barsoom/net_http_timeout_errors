@@ -31,13 +31,11 @@ describe NetHttpTimeoutErrors, ".conflate" do
   end
 
   it "keeps the original error" do
-    begin
-      NetHttpTimeoutErrors.conflate do
-        raise some_timeout_error
-      end
-    rescue => e
-      assert_instance_of some_timeout_error, e.original_error
+    NetHttpTimeoutErrors.conflate do
+      raise some_timeout_error
     end
+  rescue => e
+    assert_instance_of some_timeout_error, e.original_error
   end
 end
 
