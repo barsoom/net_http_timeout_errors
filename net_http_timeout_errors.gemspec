@@ -6,6 +6,7 @@ Gem::Specification.new do |gem|
   gem.email         = [ "henrik@nyh.se" ]
   gem.summary       = %q{Provides a list of Net::HTTP timeout errors.}
   gem.homepage      = "https://github.com/barsoom/net_http_timeout_errors"
+  gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($\)
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
