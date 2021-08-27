@@ -9,7 +9,6 @@ Gem::Specification.new do |gem|
   gem.license       = "MIT"
 
   gem.files         = `git ls-files`.split($\)
-  gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "net_http_timeout_errors"
   gem.require_paths = [ "lib" ]
   gem.version       = NetHttpTimeoutErrors::VERSION
