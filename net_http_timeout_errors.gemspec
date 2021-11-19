@@ -7,6 +7,7 @@ Gem::Specification.new do |gem|
   gem.summary       = %q{Provides a list of Net::HTTP timeout errors.}
   gem.homepage      = "https://github.com/barsoom/net_http_timeout_errors"
   gem.license       = "MIT"
+  gem.metadata      = { "rubygems_mfa_required" => "true" }
 
   gem.files         = `git ls-files`.split($\)
   gem.name          = "net_http_timeout_errors"
