@@ -13,7 +13,4 @@ Gem::Specification.new do |gem|
   gem.name          = "net_http_timeout_errors"
   gem.require_paths = [ "lib" ]
   gem.version       = NetHttpTimeoutErrors::VERSION
-
-  gem.add_development_dependency "rake"
-  gem.add_development_dependency "minitest"
 end

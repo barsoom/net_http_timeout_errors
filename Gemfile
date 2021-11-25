@@ -5,5 +5,7 @@ gemspec
 
 group :development do
   gem "barsoom_utils"
+  gem "minitest"
+  gem "rake"
   gem "rubocop"
 end
