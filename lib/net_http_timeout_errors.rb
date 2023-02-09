@@ -28,6 +28,7 @@ class NetHttpTimeoutErrors
       Net::ProtocolError,
       SocketError,
       Timeout::Error,  # Also covers subclasses like Net::OpenTimeout.
+      OpenSSL::SSL::SSLError,
     ]
   end
 

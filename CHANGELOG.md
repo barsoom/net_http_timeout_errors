@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.0
+
+* Added `OpenSSL::SSL::SSLError`.
+
 ## 0.4.0
 
 * Added `Errno::ECONNABORTED`.
