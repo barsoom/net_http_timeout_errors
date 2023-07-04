@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.1.0
+
+* Added `Errno::ENOTSOCK`.
+
 ## 1.0.0
 
 * Added `OpenSSL::SSL::SSLError`.
