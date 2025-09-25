@@ -1,5 +1,9 @@
 # Changelog
 
+# 1.2.0
+
+- Added `Errno::ENOPROTOOPT`.
+
 # 1.1.0
 
 * Added `Errno::ENOTSOCK`.

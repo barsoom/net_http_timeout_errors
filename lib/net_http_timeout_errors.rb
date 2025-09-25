@@ -11,7 +11,7 @@ end
 
 class NetHttpTimeoutErrors
   def self.all
-    # Based on the errors listed in https://ruby-doc.org/stdlib-2.7.1/libdoc/net/http/rdoc/Net/HTTP.html#method-i-max_retries-3D.
+    # Based on but not limited to the errors listed in https://ruby-doc.org/stdlib-2.7.1/libdoc/net/http/rdoc/Net/HTTP.html#method-i-max_retries-3D.
     [
       EOFError,
       Errno::ECONNABORTED,
@@ -20,6 +20,7 @@ class NetHttpTimeoutErrors
       Errno::EHOSTUNREACH,
       Errno::EINVAL,
       Errno::ENETUNREACH,
+      Errno::ENOPROTOOPT,
       Errno::ENOTSOCK,
       Errno::EPIPE,
       Errno::ETIMEDOUT,
