@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require "net_http_timeout_errors/version"
 require "net/http"
 
